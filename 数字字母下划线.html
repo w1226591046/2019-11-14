@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let str1 = '15784747321'
+        console.log(/^1[3-9]\d{9}$/.test(str1))
+
+
+            //6~18个字符{}，可使用字母、数字、下划线，需以字母开头
+            let str = 'a2345_'
+            console.log(/^[a-zA-Z]\w{5,17}$/.test(str))
+
+            //邮箱格式
+            let str2 = 'a123_333@1632.com'
+            // console.log(/^[a-zA-Z][\w_]{5,17}@[0-9A-Za-z]{2,9}\.c[om|n]$/.test(str2))
+            console.log(/^[a-zA-Z]\w{5,17}\@[0-9a-zA-Z]{3,10}\.c(om|n)$/.test(str2));
+
+
+             /*
+        . 除了\n任意的字符 
+    */    
+
+             let str = 'dj1x中8nhce2f3%6f\n7%vrxbby';
+            console.log(str.match(/.+/g));
+
+
+    </script>
+</body>
+</html>
